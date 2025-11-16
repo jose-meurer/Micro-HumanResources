@@ -38,15 +38,4 @@ public class WorkerDto {
     public void setDailyIncome(Double dailyIncome) {
         this.dailyIncome = dailyIncome;
     }
-
-    public boolean equals(Object object) {
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-        WorkerDto workerDto = (WorkerDto) object;
-        return java.util.Objects.equals(id, workerDto.id);
-    }
-
-    public int hashCode() {
-        return java.util.Objects.hash(super.hashCode(), id);
-    }
 }
