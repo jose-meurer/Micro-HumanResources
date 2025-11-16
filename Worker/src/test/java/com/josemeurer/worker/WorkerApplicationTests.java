@@ -1,10 +1,10 @@
-package com.josemeurer.HumanResources_worker;
+package com.josemeurer.worker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HumanResourcesWorkerApplicationTests {
+class WorkerApplicationTests {
 
 	@Test
 	void contextLoads() {

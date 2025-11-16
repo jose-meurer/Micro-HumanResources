@@ -1,16 +1,12 @@
-package com.josemeurer.HumanResources_worker.entities;
+package com.josemeurer.worker.entities;
 
 import jakarta.persistence.*;
 
-import java.io.Serial;
-import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "workers")
-public class Worker implements Serializable {
-    @Serial
-    private static final long serialVersionUID = 1L;
+public class Worker {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

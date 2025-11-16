@@ -1,18 +1,20 @@
-package com.josemeurer.Payroll.entities;
+package com.josemeurer.Payroll.dtos;
 
-public class Payment{
+public class PaymentDto {
 
     private String name;
     private Double dailyIncome;
     private Integer days;
+    private Double total;
 
-    public Payment() {
+    public PaymentDto() {
     }
 
-    public Payment(String name, Double dailyIncome, Integer days) {
+    public PaymentDto(String name, Double dailyIncome, Integer days, Double total) {
         this.name = name;
         this.dailyIncome = dailyIncome;
         this.days = days;
+        this.total = total;
     }
 
     public String getName() {
@@ -39,7 +41,11 @@ public class Payment{
         this.days = days;
     }
 
-    public double getTotal() {
-        return days * dailyIncome;
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
     }
 }

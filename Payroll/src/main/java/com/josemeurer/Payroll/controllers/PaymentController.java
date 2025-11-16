@@ -1,6 +1,6 @@
 package com.josemeurer.Payroll.controllers;
 
-import com.josemeurer.Payroll.entities.Payment;
+import com.josemeurer.Payroll.dtos.PaymentDto;
 import com.josemeurer.Payroll.services.PaymentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,7 @@ public class PaymentController {
     }
 
     @GetMapping("/{workerId}/days/{days}")
-    public ResponseEntity<Payment> getPayment(@PathVariable long workerId, @PathVariable int days) {
+    public ResponseEntity<PaymentDto> getPayment(@PathVariable long workerId, @PathVariable int days) {
         var payment = paymentService.getPayment(workerId, days);
         return ResponseEntity.ok(payment);
     }
