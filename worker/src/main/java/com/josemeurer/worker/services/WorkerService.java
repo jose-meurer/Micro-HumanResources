@@ -29,6 +29,6 @@ public class WorkerService {
 
     public WorkerDto findById(Long id){
         var worker = workerRepository.findById(id)
-            .orElseThrow( () -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Trabalhador não encontrado."));
+            .orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Trabalhador não encontrado."));
         return workerMapper.entityToDto(worker);}
 }

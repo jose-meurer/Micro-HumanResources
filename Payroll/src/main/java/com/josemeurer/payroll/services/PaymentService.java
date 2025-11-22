@@ -2,7 +2,7 @@ package com.josemeurer.payroll.services;
 
 import com.josemeurer.payroll.dtos.PaymentDto;
 import com.josemeurer.payroll.entities.Payment;
-import com.josemeurer.payroll.feignclients.WorkerFeignClient;
+import com.josemeurer.payroll.integrations.worker.WorkerFeignClient;
 import com.josemeurer.payroll.mappers.PaymentMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
